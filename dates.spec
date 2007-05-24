@@ -2,7 +2,7 @@
 # TODO:
 # - dates-devel and dates-static
 #
-Summary:	tiny GNOME datebook app
+Summary:	Tiny GNOME datebook application
 Name:		dates
 Version:	0.4.2
 Release:	1
