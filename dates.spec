@@ -58,12 +58,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 /sbin/ldconfig
-#%gconf_schema_install dates.schemas
 %scrollkeeper_update_post
 %update_icon_cache hicolor
-
-%preun
-#%gconf_schema_uninstall dates.schemas
 
 %postun
 %scrollkeeper_update_postun
@@ -75,7 +71,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/libgtkdatesview.so.0.0.0
-#%{_sysconfdir}/gconf/schemas/dates.schemas
 %{_desktopdir}/dates.desktop
 %{_iconsdir}/hicolor/48x48/apps/dates.png
 %dir %{_datadir}/dates
