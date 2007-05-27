@@ -1,4 +1,3 @@
-# TODO: -devel deps
 Summary:	Tiny GNOME datebook application
 Summary(pl.UTF-8):	Mała aplikacja kalendarza dla GNOME
 Name:		dates
@@ -9,13 +8,15 @@ Group:		Applications/Communications
 Source0:	http://pimlico-project.org/sources/dates/%{name}-%{version}.tar.gz
 # Source0-md5:	b3e5e32462a2f52f42ec3daea1a55ebd
 URL:		http://pimlico-project.org/dates.html
-BuildRequires:	autoconf
+BuildRequires:	GConf2-devel >= 2.0
+BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake
-BuildRequires:	evolution-data-server-devel
+BuildRequires:	evolution-data-server-devel >= 1.2
 BuildRequires:	gtk+2-devel >= 2:2.10.7
-#BuildRequires:	libglade2-devel >= 1:2.6.0
+BuildRequires:	intltool >= 0.35.0
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel >= 1:2.6.27
+BuildRequires:	pkgconfig
 Requires(post,postun):	/sbin/ldconfig
 Requires(post,postun):	hicolor-icon-theme
 Requires(post,postun):	scrollkeeper
@@ -40,6 +41,9 @@ Summary:	Header files for gtkdatesview library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki gtkdatesview
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	GConf2-devel >= 2.0
+Requires:	evolution-data-server-devel >= 1.2
+Requires:	gtk+2-devel >= 2:2.10.7
 
 %description devel
 Header files for gtkdatesview library.
