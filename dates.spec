@@ -17,7 +17,6 @@ BuildRequires:	intltool >= 0.35.0
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel >= 1:2.6.27
 BuildRequires:	pkgconfig
-Requires(post,postun):	/sbin/ldconfig
 Requires(post,postun):	hicolor-icon-theme
 Requires(post,postun):	scrollkeeper
 Obsoletes:	dates-devel <= 0.4.3
