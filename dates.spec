@@ -1,12 +1,12 @@
 Summary:	Tiny GNOME datebook application
 Summary(pl.UTF-8):	Mała aplikacja kalendarza dla GNOME
 Name:		dates
-Version:	0.4.4
+Version:	0.4.5
 Release:	1
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://pimlico-project.org/sources/dates/%{name}-%{version}.tar.gz
-# Source0-md5:	224d3caef549988447f3bc70123a0755
+# Source0-md5:	13f2bb562a13610c005a4e6204112661
 URL:		http://pimlico-project.org/dates.html
 BuildRequires:	GConf2-devel >= 2.0
 BuildRequires:	autoconf >= 2.53
@@ -83,7 +83,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/hicolor/16x16/apps/dates.png
 %{_iconsdir}/hicolor/22x22/apps/dates.png
 %{_iconsdir}/hicolor/24x24/apps/dates.png
+#%{_iconsdir}/hicolor/26x26/apps/dates.png
 %{_iconsdir}/hicolor/32x32/apps/dates.png
 %{_iconsdir}/hicolor/48x48/apps/dates.png
+%{_iconsdir}/hicolor/64x64/apps/dates.png
 %{_iconsdir}/hicolor/scalable/apps/dates.svg
 %{_mandir}/man1/dates.1*
