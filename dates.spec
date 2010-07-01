@@ -7,11 +7,13 @@ License:	GPL
 Group:		Applications/Communications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/dates/0.4/%{name}-%{version}.tar.gz
 # Source0-md5:	e9e9abdc326e8a3707dce46d6690727c
+Patch0:		%{name}-link.patch
 URL:		http://pimlico-project.org/dates.html
 BuildRequires:	GConf2-devel >= 2.0
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake
 BuildRequires:	evolution-data-server-devel >= 1.2
+BuildRequires:	gettext-devel
 BuildRequires:	gtk+2-devel >= 2:2.10.7
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	libtool
@@ -39,6 +41,7 @@ Maemo oraz dla urządzeń OpenMoko.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__glib_gettextize}
