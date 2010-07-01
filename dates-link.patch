@@ -1,0 +1,16 @@
+--- dates-0.4.10/src/Makefile.am~	2009-07-29 17:27:18.000000000 +0200
++++ dates-0.4.10/src/Makefile.am	2010-07-01 14:32:21.260760292 +0200
+@@ -35,10 +35,12 @@
+ 	gconf-bridge.h		\
+ 	gconf-bridge.c
+ 
+-dates_LDADD = $(DATES_LIBS) libgtkdatesview.la
++dates_LDADD = libgtkdatesview.la
+ 
+ if USE_OWL
+ dates_LDADD += $(top_builddir)/libowl/libowl.la
+ endif 
+ 
++dates_LDADD += $(DATES_LIBS)
++
+ MAINTAINERCLEANFILES = config.h.in Makefile.in
