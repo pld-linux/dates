@@ -2,12 +2,13 @@ Summary:	Tiny GNOME datebook application
 Summary(pl.UTF-8):	Mała aplikacja kalendarza dla GNOME
 Name:		dates
 Version:	0.4.11
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/dates/0.4/%{name}-%{version}.tar.bz2
 # Source0-md5:	aa4a10ab181d8a6003098425c2d88ab4
 Patch0:		%{name}-link.patch
+Patch1:		makefile.patch
 URL:		http://pimlico-project.org/dates.html
 BuildRequires:	GConf2-devel >= 2.0
 BuildRequires:	autoconf >= 2.53
@@ -43,6 +44,7 @@ Maemo oraz dla urządzeń OpenMoko.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__glib_gettextize}

@@ -1,0 +1,9 @@
+--- dates-0.4.11/Makefile.am~	2009-10-16 19:27:21.000000000 +0200
++++ dates-0.4.11/Makefile.am	2010-09-30 00:33:54.591928395 +0200
+@@ -7,5 +7,5 @@
+ MAINTAINERCLEANFILES = $(DISTCLEANFILES) aclocal.m4 compile config.guess config.sub configure depcomp install-sh ltmain.sh Makefile.in missing
+ 
+ snapshot:
+-        $(MAKE) dist distdir=$(PACKAGE)-snap`date +"%Y%m%d"`
++	$(MAKE) dist distdir=$(PACKAGE)-snap`date +"%Y%m%d"`
+ 
