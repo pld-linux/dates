@@ -2,7 +2,7 @@ Summary:	Tiny GNOME datebook application
 Summary(pl.UTF-8):	Mała aplikacja kalendarza dla GNOME
 Name:		dates
 Version:	0.4.11
-Release:	5
+Release:	6
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/dates/0.4/%{name}-%{version}.tar.bz2
@@ -21,8 +21,8 @@ BuildRequires:	libtool
 BuildRequires:	libxml2-devel >= 1:2.6.27
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.311
-Requires(post,postun):	gtk+2
-Requires:	hicolor-icon-theme
+Requires(post,postun):	gtk-update-icon-cache
+Requires(post,postun):	hicolor-icon-theme
 Obsoletes:	dates-devel <= 0.4.3
 Obsoletes:	dates-static <= 0.4.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
